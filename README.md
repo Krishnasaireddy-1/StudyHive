@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Gamified learning platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is designed as an interactive learning platform where teachers can conduct quizzes, students can access study material, experience gamified learning, and socially connect with friends. Additionally, it allows users to upload a PDF file, generate questions and answers from its content, and engage with the generated questions on the frontend.
 
-## Available Scripts
+## Features
+- Upload a PDF file
+- Extract text from the PDF
+- Conduct quizzes for students
+- Provide study materials for enhanced learning
+- Gamified learning experience
+- Social features to connect with friends
+- User-friendly interface for interaction
 
-In the project directory, you can run:
+## Tech Stack
+- **Backend:** Node.js
+- **Frontend:** React.js,Tailwind Css
+- **Database:** MongoDB / Firebase (if needed for storage)
+- **Storage:** Local / Cloud storage for PDFs
 
-### `npm start`
+## Installation
+### Prerequisites
+- Python 3.8+
+- Node.js 16+
+- Virtual environment (optional but recommended)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend Setup
+```bash
+# Clone the repository
+git clone https://github.com/your-repo/pdf-qa-generator.git
+cd pdf-qa-generator/backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-### `npm test`
+# Install dependencies
+pip install -r requirements.txt
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run the backend
+uvicorn main:app --reload  # If using FastAPI
+# OR
+python app.py  # If using Flask
+```
 
-### `npm run build`
+### Frontend Setup
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
+1. Open the frontend in a browser.
+2. Upload a PDF file.
+3. Wait for the system to process and generate questions and answers.
+4. Teachers can create quizzes.
+5. Students can access learning materials and participate in gamified learning.
+6. Users can socially connect with friends.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Enhancements
+- Improve question generation accuracy
+- Support multiple languages
+- Export Q&A to different formats (CSV, JSON, etc.)
+- Add user authentication for saving progress
+- Enhance gamification features
+- Introduce leaderboards and rewards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
+Pull requests are welcome. Please follow the contribution guidelines.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License.
