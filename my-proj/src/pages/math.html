@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function joinRoom() {
+            localStorage.setItem("mathJoined", "true");
+            document.getElementById("join-section").classList.add("hidden");
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem("mathJoined") === "true") {
+                document.getElementById("join-section").classList.add("hidden");
+            }
+        };
+    </script>
+</head>
+<body class="bg-[#9BA4B5] flex flex-col items-center justify-center min-h-screen text-black p-6">
+
+    <h1 class="text-3xl font-bold mb-6">Mathematics Course</h1>
+
+    <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+        <h2 class="text-xl font-semibold mb-4">Subtopics</h2>
+        <ul class="list-disc list-inside space-y-2">
+            <li><a href="determinants.html" class="text-blue-600 hover:underline">Matrices & Determinants</a></li>
+            <li><a href="diff.html" class="text-blue-600 hover:underline">Differentiation</a></li>
+        </ul>
+
+        <div id="join-section" class="mt-6">
+            <button onclick="joinRoom()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                Click to Join Room
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
