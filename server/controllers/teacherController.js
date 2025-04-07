@@ -1,4 +1,4 @@
-const Teacher = require("../models/Teacher");
+const Teacher = require("../models/teacherModel");
 const getTeacherData = async (req, res) => {
   const { teacherName } = req.body;
   if (!teacherName) {
