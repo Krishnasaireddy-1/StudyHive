@@ -215,7 +215,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import '../style.css';
 
-const API_URL = "http://www.localhost:5000/auth";
+const API_URL = "https://studyhive-q61e.onrender.com/auth";
 
 const Login = () => {
   const [isRegistering, setIsRegistering] = useState(false);

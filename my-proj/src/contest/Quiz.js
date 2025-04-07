@@ -10,7 +10,7 @@ const Quiz = () => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:5000");
+    socketRef.current = io("https://studyhive-q61e.onrender.com");
 
     socketRef.current.on("connect", () => {
       console.log("Connected to WebSocket server");

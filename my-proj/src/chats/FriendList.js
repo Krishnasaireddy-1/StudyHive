@@ -105,7 +105,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://studyhive-q61e.onrender.com";
 
 const FriendItem = ({ data, onClick, isSelected }) => (
   <div

@@ -10,7 +10,7 @@
 // import Explore from "./Explore";
 // import '../style.css';
 
-// const API_URL = "http://localhost:5000";
+// const API_URL = "https://studyhive-q61e.onrender.com";
 // const socket = io(API_URL, { transports: ["websocket"] });
 
 // const Social = () => {
@@ -47,6 +47,23 @@
 //     });
 
 //     return () => socket.off("receive_message");
+//   }, []);
+
+//   useEffect(() => {
+//     const script = document.createElement("script");
+//     script.src = "http://your-botpress-url.com/webchat/botpress-webchat.js";
+//     script.async = true;
+//     script.onload = () => {
+//       window.botpressWebChat.init({
+//         host: "http://your-botpress-url.com",
+//         botId: "your-bot-id",
+//         botAvatar: "https://your-default-avatar-url.com/avatar.png",
+//         userAvatar: "https://your-user-avatar-url.com/user.png",
+//         showCloseButton: true,
+//         theme: "dark"
+//       });
+//     };
+//     document.body.appendChild(script);
 //   }, []);
 
 //   const handleSelectFriend = async (friend) => {
@@ -115,7 +132,7 @@
 //       </div>
 
 //       {/* Explore Button - Moved to Right Side */}
-//       <div className="fixed bottom-5 right-[calc(50%-4rem)]">
+//       <div className="fixed bottom-5 right-5">
 //         <button
 //           onClick={() => setShowExplore(!showExplore)}
 //           className="flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-110"
@@ -139,7 +156,7 @@ import ChatInput from "./ChatInput";
 import Explore from "./Explore";
 import '../style.css';
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://studyhive-q61e.onrender.com";
 const socket = io(API_URL, { transports: ["websocket"] });
 
 const Social = () => {
@@ -176,23 +193,6 @@ const Social = () => {
     });
 
     return () => socket.off("receive_message");
-  }, []);
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "http://your-botpress-url.com/webchat/botpress-webchat.js";
-    script.async = true;
-    script.onload = () => {
-      window.botpressWebChat.init({
-        host: "http://your-botpress-url.com",
-        botId: "your-bot-id",
-        botAvatar: "https://your-default-avatar-url.com/avatar.png",
-        userAvatar: "https://your-user-avatar-url.com/user.png",
-        showCloseButton: true,
-        theme: "dark"
-      });
-    };
-    document.body.appendChild(script);
   }, []);
 
   const handleSelectFriend = async (friend) => {
